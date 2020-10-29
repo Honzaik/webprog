@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jan Oupicky" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="http://demo.stools.net" method="post">
+        <label for="username">Uživatelské jméno:</label>
+        <input id="username" type="text" name="username" required placeholder="Zde napište své uživatelské jméno" />
+        <br>
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="Zde napište svůj email" />
+        <br>
+        <label for="age">Věk:</label>
+        <input id="age" type="number" name="age" min="0" />
+        <br>
+        <label for="comment">Komentář:</label>
+        <textarea id="comment" name="comment" required></textarea>
+        <br>
+        <label for="type">Typ:</label>
+        <select id="type" name="publish">
+            <option value="public">public</option>
+            <option value="private" selected>private</option>
+        </select>
+        <br>
+        <input type="submit" value="Odeslat" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+html {
+    font-family: "Arial";
+    font-size: 20px;
+}
+
+h1 {
+    line-height: 50px;
+    padding: 20px 40px;
+    margin-left: 10px;
+}
+
+thead {
+    background-color: rgba(50, 50, 50, 1);
+    color: rgba(250, 250, 250, 1);
+}
+
+th + th + th {
+    color: rgba(0, 200, 0, 0.8);
+}
+
+th:first-child {
+    color: rgba(50, 200, 200, 0.8);
+}
+
+#main div.img-cont {
+    width: 500px;
+    height: 300px;
+    background-image: url("cat.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px dashed rgba(60, 60, 20, 0.5);
+}
+
+td[data-availability="0"] {
+    background-color: rgba(200, 0, 0, 0.5);
+}
+
+td[data-availability="0"]:hover {
+    background-color: rgba(200, 0, 0, 0.2);
+}
