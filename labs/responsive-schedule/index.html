@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Grid</title>
+<meta charset="utf-8">
+<style type="text/css">
+    body {
+        font: 14pt Calibri;
+        margin: 0px;
+    }
+
+    #schedule {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #schedule dl{
+        width: 200vh;
+        height: 100vh;
+        font-size: 3vh;
+        border: 1px solid black;
+        margin: 0;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(7, calc(100% / 7));
+        grid-template-rows: repeat(5, calc(100% / 5));
+    }
+
+    @media (max-aspect-ratio: 2/1) {
+        #schedule {
+            height: 100vh;
+        }
+
+        #schedule dl {
+            width: 100vw;
+            height: 50vw;
+            font-size: 1.5vw;
+        }
+
+    }
+
+    #schedule dt {
+        font-weight: bold;
+        display: none;
+    }
+
+    #schedule dd {
+        margin-bottom: 1em;
+        background-color: #9c27b0;
+        color: black;
+        margin-inline-start: 0;
+        margin-left: 5px;
+    }
+
+    #schedule dd span{
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: calc(100% / 3);
+        white-space: nowrap;
+        background-color: #9c27b0;
+    }
+
+    #schedule dd span:hover{
+        overflow: visible;
+        display: inline-block;
+    }
+
+    #schedule dd[data-day="Mon"]{
+        grid-row: 1;
+    }
+    #schedule dd[data-day="Tue"]{
+        grid-row: 2;
+    }
+    #schedule dd[data-day="Wed"]{
+        grid-row: 3;
+    }
+    #schedule dd[data-day="Thu"]{
+        grid-row: 4;
+    }
+    #schedule dd[data-day="Fri"]{
+        grid-row: 5;
+    }
+
+    #schedule dd[data-time="9:00"]{
+        grid-column: 1;
+        z-index: 7;
+    }
+    #schedule dd[data-time="10:40"]{
+        grid-column: 2;
+        z-index: 6;
+    }
+    #schedule dd[data-time="12:20"]{
+        grid-column: 3;
+        z-index: 5;
+    }
+    #schedule dd[data-time="14:00"]{
+        grid-column: 4;
+        z-index: 4;
+    }
+    #schedule dd[data-time="15:40"]{
+        grid-column: 5;
+        z-index: 3;
+    }
+    #schedule dd[data-time="17:20"]{
+        grid-column: 6;
+        z-index: 2;
+    }
+    #schedule dd[data-time="19:00"]{
+        grid-column: 7;
+        z-index: 1;
+    }
+
+</style>
+</head>
+
+<body>
+
+<main id="schedule">
+    <dl>
+        <dt>Mon 14:00</dt>
+        <dd data-day="Mon" data-time="14:00">
+            <span>Web Applications Programming</span>
+            <span>Kruliš Martin, RNDr., Ph.D.</span>
+            <span>S3 14:00 NSWI142</span>
+        </dd>
+        <dt>Thu 12:20</dt>
+        <dd data-day="Thu" data-time="12:20">
+            <span>Web Applications Programming</span>
+            <span>Hoksza David, RNDr., Ph.D., Peška Ladislav, Mgr., Ph.D., Škoda Petr, Mgr., Ph.D.</span>
+            <span>SW2 12:20 NSWI142</span>
+        </dd>
+        <dt>Fri 10:40</dt>
+        <dd data-day="Fri" data-time="10:40">
+            <span>Web Applications Programming</span>
+            <span>Peška Ladislav, Mgr., Ph.D.</span>
+            <span>SW2 10:40 NSWI142</span>
+        </dd>
+        <dt>Fri 12:20</dt>
+        <dd data-day="Fri" data-time="12:20">
+            <span>Web Applications Programming</span>
+            <span>Kruliš Martin, RNDr., Ph.D.</span>
+            <span>SW2 12:20  NSWI142</span>
+        </dd>
+    </dl>
+</main>
+
+</body>
+</html>
