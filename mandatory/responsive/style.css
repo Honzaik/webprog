@@ -45,13 +45,21 @@ img {
         flex-direction: column;
     }
 
+    #content {
+        width: auto;
+        min-width: 400px;
+    }
+
     #sidebar {
         margin-right: 0;
         height: 100px;
+        min-width: 400px;
     }
 
     #sidebar > nav {
-        position: relative;
+        top: 0;
+        left: 5px;
+        right: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
